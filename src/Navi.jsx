@@ -31,12 +31,12 @@ function Navi(){
           <>
                <BrowserRouter basename="/Backyward">
                     <Routes>
-                         <Route path='/Home' element={<Home/>}/>
-                         <Route path='/Design' element={<Designandinstall/>}/>
-                         <Route path='/Maintnence' element={<Maintnence/>}/>
-                         <Route path='/Maintnence/Mulching' element={<Mulching/>}/>
-                         <Route path='/Maintnence/Pruning' element={<Pruning/>}/>
-                         <Route path='/Gallery' element={<Gallery/>}/>
+                         <Route path='./Home' element={<Home/>}/>
+                         <Route path='./Design' element={<Designandinstall/>}/>
+                         <Route path='./Maintnence' element={<Maintnence/>}/>
+                         <Route path='./Maintnence/Mulching' element={<Mulching/>}/>
+                         <Route path='./Maintnence/Pruning' element={<Pruning/>}/>
+                         <Route path='./Gallery' element={<Gallery/>}/>
                          <Route path='/About' element={<About/>}/>
                          <Route path='/FAQ' element={<FAQ/>}/>
                          <Route path='/ContactUs' element={<ContactUs/>}/>
