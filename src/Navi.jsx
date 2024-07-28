@@ -13,8 +13,6 @@ import About from "./About.jsx";
 import FAQ from "./FAQ.jsx";
 import ContactUs from "./ContactUs.jsx";
 
-import JKJKl from "./test.jsx";
-
 /* Color guided
 Text off-white: #f7f7f7
 Main green: #0f725e
@@ -31,7 +29,7 @@ Text black: Default text color
 function Navi(){
      return(
           <>
-               <BrowserRouter basename="/Backyward">
+               <BrowserRouter basename="/">
                     <Routes>
                          <Route path='/Home' element={<Home/>}/>
                          <Route path='/Design' element={<Designandinstall/>}/>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {useEffect, useState} from "react";
 import { useMediaQuery } from 'react-responsive'
+import {useNavigate} from "react-router-dom";
 
 
 const Df=styled.span`
@@ -127,7 +128,7 @@ const DivId1=styled.div`
 
 ///IMPORTANT: This component expects to be in a flex block that has the row property
 function HeadLinkRow({offset="30", homeStuff="", theme=headerThemeing}){
-
+     const navv=useNavigate();
      return(
           <DivId1>
                <HeaderLinks href='/Home' title="Home" theme={theme}>Home</HeaderLinks>
