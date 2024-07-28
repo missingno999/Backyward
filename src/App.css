@@ -1,0 +1,58 @@
+header#home{
+     display: block flex;
+     height: 25vh;
+     width: 100%;
+     overflow-x: visible;
+     background-image: radial-gradient(rgb(0 0 0/90%), rgb(0 0 0/0%));
+     background-position: bottom;
+     background-repeat: no-repeat;
+     background-size: 100% 200%;
+     flex-direction: column;
+     justify-content: center;
+
+     div{
+          display: block flex;
+          align-self: center;
+          flex-direction: row;
+          min-height:25%;
+          max-height:65%;
+     }
+     div#phoneNum{
+          display: flex;
+          position:absolute;
+          width:100%;
+          min-height: 0;
+          top:0;
+          div{
+               flex-grow:1;
+          }
+          p{
+               color: #f7f7f7;
+               font-size: 20px;
+               margin-right: 10px;
+          }
+     }
+     div:has(div#header){ /*Text is correct, but where the text is in the <a> is wrong*/
+          max-height:1%;
+          min-height:33%;
+          align-self: stretch;
+          justify-content: center;
+          div#header{
+
+               align-self: center;
+               display: block flex;
+               flex-direction: row;
+               flex-grow: 0.6;
+
+               a{
+                    text-align: center;
+                    color: #f7f7f7;
+               }
+          }
+     }
+}
+
+a{
+     text-decoration:none;
+     color:black;
+}
