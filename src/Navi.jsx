@@ -43,7 +43,7 @@ function Navi(){
                          <Route path='/' element={<Home/>}/>
                     </Routes>
                </BrowserRouter>
-               <div> hoi bitch jjjjjj</div>
+               <div> bitch jjjjjj</div>
                <Contact/>
           </>
      )
