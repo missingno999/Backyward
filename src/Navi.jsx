@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter,BrowserRouter, Routes, Route} from "react-router-dom";
 
 
 import Home from './App.jsx';
@@ -29,7 +29,7 @@ Text black: Default text color
 function Navi(){
      return(
           <>
-               <BrowserRouter basename="/Backyward">
+               <HashRouter>{/*<BrowserRouter>*/}
                     <Routes>
                          <Route path='/Home' element={<Home/>}/>
                          <Route path='/Design' element={<Designandinstall/>}/>
@@ -40,10 +40,10 @@ function Navi(){
                          <Route path='/About' element={<About/>}/>
                          <Route path='/FAQ' element={<FAQ/>}/>
                          <Route path='/ContactUs' element={<ContactUs/>}/>
-                         <Route path='/' element={<Mulching/>}/>
+                         <Route path='/' element={<Home/>}/>
                     </Routes>
-               </BrowserRouter>
-               <div>sdad foj</div>
+               </HashRouter>{/*</BrowserRouter>*/}
+               <div>kk</div>
                <Contact/>
           </>
      )
