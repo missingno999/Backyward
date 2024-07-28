@@ -550,7 +550,7 @@ text-decoration: none;
      }
      margin:0px;
 `,P1=O.div`
-     background-image:url(/src/assets/Placeholder.png);
+     background-image:url(/Placeholder.png);
      width:100%;
      height:100vh;
      div#phoneNum{
