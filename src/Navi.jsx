@@ -40,10 +40,10 @@ function Navi(){
                          <Route path='/About' element={<About/>}/>
                          <Route path='/FAQ' element={<FAQ/>}/>
                          <Route path='/ContactUs' element={<ContactUs/>}/>
-                         <Route path='/' element={<Home/>}/>
+                         <Route path='/' element={<Mulching/>}/>
                     </Routes>
                </BrowserRouter>
-               <div> foj</div>
+               <div>sdad foj</div>
                <Contact/>
           </>
      )
