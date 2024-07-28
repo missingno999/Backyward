@@ -29,7 +29,7 @@ Text black: Default text color
 function Navi(){
      return(
           <>
-               <BrowserRouter basename="/">
+               <BrowserRouter basename="/Backyward">
                     <Routes>
                          <Route path='/Home' element={<Home/>}/>
                          <Route path='/Design' element={<Designandinstall/>}/>
