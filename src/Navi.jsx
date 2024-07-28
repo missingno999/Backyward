@@ -31,7 +31,7 @@ Text black: Default text color
 function Navi(){
      return(
           <>
-               <BrowserRouter>
+               <BrowserRouter basename="/Backyward">
                     <Routes>
                          <Route path='/Home' element={<Home/>}/>
                          <Route path='/Design' element={<Designandinstall/>}/>
@@ -42,10 +42,10 @@ function Navi(){
                          <Route path='/About' element={<About/>}/>
                          <Route path='/FAQ' element={<FAQ/>}/>
                          <Route path='/ContactUs' element={<ContactUs/>}/>
-                         <Route path='./' element={<Home/>}/>
+                         <Route path='/' element={<Home/>}/>
                     </Routes>
                </BrowserRouter>
-               <div> hoi bitch</div>
+               <div> hoi bitch jjjjjj</div>
                <Contact/>
           </>
      )

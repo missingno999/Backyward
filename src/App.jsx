@@ -30,7 +30,7 @@ const IP2=styled(IntroPara)`
 `;
 
 const HomeBack=styled.div`
-     background-image:url(/src/assets/Placeholder.png);
+     background-image:url(${(props)=>(props.b)});
      width:100%;
      height:100vh;
      div#phoneNum{
@@ -233,7 +233,7 @@ function Home() {
      return (
           <>
           <MainHeader homePageProp={1}/>
-               <HomeBack>
+               <HomeBack b={Placeholder}>
                {!mobile ?
                     <>
                          <header id="home">
