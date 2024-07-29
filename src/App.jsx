@@ -7,7 +7,8 @@ import { useMediaQuery } from 'react-responsive'
 
 import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
 import MainHeader from "./MainHeader.jsx"
-import {HeadLinkRow,ParaButton,PurpButt,SquareFrame,Df,WrappingDiv,WrappedButtons,IntroPara} from "./GlobalComponents.jsx";
+import HeadLinkRow from "./HeaderLinks.jsx";
+import {IntroPara,ParaButton,PurpButt,SquareFrame,WrappingDiv,WrappedButtons} from "./GlobalComponents.jsx";
 import {imgListB} from "./Gallery.jsx";
 
 import './App.css';

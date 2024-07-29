@@ -4,7 +4,7 @@ import {useState} from "react";
 import MainHeader from "./MainHeader.jsx";
 import Pagepichead from "./Pagepichead.jsx";
 import Placeholder from "./assets/Placeholder.png";
-import {IntroPara} from "./GlobalComponents.jsx";
+import {IntroPara} from "./Pagepichead.jsx";
 
 const BackDrop=styled.div`
      padding: 5%;

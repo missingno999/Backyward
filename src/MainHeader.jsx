@@ -5,30 +5,30 @@ import { useMediaQuery } from 'react-responsive'
 import LogoPlus from "./logoPlus.jsx";
 import ham from "./assets/ham.webp";
 
-import {HeadLinkRow,Df} from "./GlobalComponents.jsx";
+import HeadLinkRow from "./HeaderLinks.jsx";
 import MobNav from "./mobileNavigation.jsx";
 
 
 
 const MainHead=styled.header`
-     z-index: 2;
-     border-bottom-style: ridge;
-     border-color: #0f725e;
-     display: flex;
+     z-index:2;
+     border-bottom-style:ridge;
+     border-color:#0f725e;
+     display:flex;
      position:fixed;
-     background-color: #0f725e;
-     transition: transform, opacity;
-     transition-duration: 500ms,200ms;
-     transition-delay: 0ms,${(props)=>(props.h!=0 ? '0ms':'180ms')};
-     transform: translate(0, ${(props)=>(props.h!=0 ? "-95px":"0px")});
+     background-color:#0f725e;
+     transition:transform, opacity;
+     transition-duration:500ms,200ms;
+     transition-delay:0ms,${(props)=>(props.h!=0 ? '0ms':'180ms')};
+     transform:translate(0, ${(props)=>(props.h!=0 ? "-95px":"0px")});
      opacity:${(props)=>(props.h!=0 ? "0":"1")};
-     height: 95px;
-     width: 100%;
-     flex-direction: row;
-     justify-content: space-between;
+     height:95px;
+     width:100%;
+     flex-direction:row;
+     justify-content:space-between;
      anchor-name: --mainHeader;
      div#hoi{
-          flex-grow: 0.2;
+          flex-grow:0.2;
      }
      div{
           display:block flex;
@@ -40,7 +40,7 @@ const MainHead=styled.header`
 const Hammy=styled.button`
      width:64px;
      height:64px;
-     background-color: #ba9979;
+     background-color:#ba9979;
      align-self:center;
      margin-left:20px;
      border-radius:100%;
@@ -48,7 +48,7 @@ const Hammy=styled.button`
 `;
 
 const MobileHomeUL=styled(MobNav)`
-     border-style: none;
+     border-style:none;
      background: radial-gradient(rgb(0 0 0/90%), rgb(0 0 0/0%));
      background-position: right;
      background-repeat: no-repeat;
@@ -83,18 +83,6 @@ function MainHeader({homePageProp=0,className,homePageProp2=0}){
           }
           return(()=>{});
      },[]);
-
-     /*function popUpTrig(){
-          setTimer(window.setTimeout(()=>(console.log("Hoooooooooooi Temmieeeeeeeeeeeeeeeeee!")),1000));
-          console.log("hoi I temmie");
-     }
-
-     function abortPopUp(){
-          clearTimeout(timer);
-          console.log("Ooooooo, temmie sads...");
-     }
-      onMouseOver={()=>(popUpTrig())} onMouseLeave={()=>(abortPopUp())}
-     */
 
 
      return(

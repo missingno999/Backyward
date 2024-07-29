@@ -3,13 +3,14 @@ import {useState} from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import Pagepichead from "./Pagepichead.jsx";
+
 import Placeholder from "./assets/Placeholder.png";
 import logo from "./assets/logo.png"
 import icon from "./assets/icon.png"
 
 import MainHeader from "./MainHeader.jsx"
 import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
-import {ParaButton,IntroPara,Df} from "./GlobalComponents.jsx";
+import {IntroPara,ParaButton} from "./GlobalComponents.jsx";
 
 function Carousel(){
      const [visi,setVisi]=useState({vis: false, in: 0})
@@ -20,6 +21,11 @@ function Carousel(){
      </>
      )
 }
+
+const Df=styled.span`
+     font-family:Kalocsai_Flowers;
+     font-size:${(props)=>(props.fs)};
+`;
 
 const ParaButtonStyled=styled(ParaButton)`
      @media (max-width:702px){

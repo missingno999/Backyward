@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import {useState} from "react";
-import {Df} from "./GlobalComponents.jsx";
+
+const Df=styled.span`
+     font-family:Kalocsai_Flowers;
+     font-size:${(props)=>(props.fs)};
+`;
 
 const Ul=styled.ul`
      transition-property: transform;

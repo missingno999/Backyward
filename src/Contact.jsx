@@ -4,16 +4,16 @@ import "./fontDir.css";
 const Hr=styled.hr`
      height:5px;
      background-color:#ba9979;
-     border-style: none;
-     margin-left: 0;
-     width: 30%;
-     align-self: start;
+     border-style:none;
+     margin-left:0;
+     width:30%;
+     align-self:start;
 `;
 
 const H2=styled.h2`
      color:#0f725e;
-     margin-bottom: 0;
-     font-family: Courgette-Regular;
+     margin-bottom:0;
+     font-family:Courgette-Regular;
 `;
 
 const P=styled.p`
@@ -40,8 +40,8 @@ function ContactDiv(props){
 const Divv=styled.div`
           background-color:${(props)=>(props.color)};
           display: block flex;
-          justify-content: space-evenly;
-          border-top-style: ${(props)=>(props.bord)};
+          justify-content:space-evenly;
+          border-top-style:${(props)=>(props.bord)};
           @media (max-width:660px){
                flex-wrap:wrap;
           }
