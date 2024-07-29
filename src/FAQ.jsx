@@ -42,9 +42,9 @@ const CollapHead=styled.div`
 `;
 
 const CollapBody=styled.div`
-     transition-property: display,max-height,padding-top,padding-bottom,border-radius;
-     transition-duration:500ms,500ms,500ms,500ms,500ms,0ms;
-     transition-delay: 0ms,0ms,0ms,0ms,${(props)=>(props.open ? '500ms':'0ms')};
+     transition-property: display,max-height,padding-top,padding-bottom,border-radius,border-bottom-style;
+     transition-duration:500ms,500ms,500ms,500ms,500ms,500ms;
+     transition-delay: 0ms,0ms,0ms,0ms,${(props)=>(props.open ? '500ms,500ms':'0ms,0ms')};
      transition-behavior: allow-discrete;
      max-height:500px;
      display: ${(props)=>(props.open ? 'flex':`none; max-height:0px !important;

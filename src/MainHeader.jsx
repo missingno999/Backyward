@@ -14,12 +14,13 @@ const MainHead=styled.header`
      z-index:2;
      border-bottom-style:ridge;
      border-color:#0f725e;
-     display:flex;
+     display:${(props)=>(props.h!=0 ? "none":"flex")};
      position:fixed;
      background-color:#0f725e;
-     transition:transform, opacity;
-     transition-duration:500ms,200ms;
-     transition-delay:0ms,${(props)=>(props.h!=0 ? '0ms':'180ms')};
+     transition-property:transform, opacity,display;
+     transition-duration:500ms,200ms,500ms;
+     transition-behavior:allow-discrete;
+     transition-delay:0ms,${(props)=>(props.h!=0 ? '0ms':'180ms')},0ms;
      transform:translate(0, ${(props)=>(props.h!=0 ? "-95px":"0px")});
      opacity:${(props)=>(props.h!=0 ? "0":"1")};
      height:95px;
@@ -27,6 +28,10 @@ const MainHead=styled.header`
      flex-direction:row;
      justify-content:space-between;
      anchor-name: --mainHeader;
+     @starting-style{
+          transform:translate(0,-95px);
+          opacity:0;
+     }
      div#hoi{
           flex-grow:0.2;
      }

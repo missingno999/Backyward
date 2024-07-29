@@ -80,7 +80,8 @@ const PurpleButton=styled.button`
           background-color:#b083d8;
      }
      &&:focus{
-          box-shadow: 0px 0px 15px 5px black;
+          text-decoration:underline;
+          box-shadow: 0px 0px 15px 3px black;
      }
 `;
 

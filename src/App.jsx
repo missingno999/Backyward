@@ -192,10 +192,8 @@ const MobileHomeHeader=styled(MainHeader)`
      }
 `;
 
-function Home() {
-     const [imagees,setImagees]=useState(imageShuffle(3))
-     const mobile=useMediaQuery({query:'(max-width: 768px)'});
-     const reallyMobile=useMediaQuery({query:'(max-width: 490px)'});
+function Imaginationg(){
+     const [imagees,setImagees]=useState(imageShuffle(3));
 
      function imageShuffle(numImages){
           let goods=[];
@@ -229,7 +227,19 @@ function Home() {
                trueGoods[i]=imgListB[goods[i]];
           }
           return trueGoods;
-     }
+     };
+
+     return(
+          <a href="/Gallery"><ImageCarousel imageList={imagees} Title="A look at our displays" controlType="auto" canFullScreen="0" toFull={function(trash){}} Height="300" cursOver={"Click for our Gallery!"}/></a>
+     )
+}
+
+function Home() {
+
+     const mobile=useMediaQuery({query:'(max-width: 768px)'});
+     const reallyMobile=useMediaQuery({query:'(max-width: 490px)'});
+
+
 
      return (
           <>
@@ -352,8 +362,8 @@ function Home() {
                     </>
                }
                </WrappingDiv>
-
-               <a href="/Gallery"><ImageCarousel imageList={imagees} Title="A look at our displays" controlType="auto" canFullScreen="0" toFull={function(trash){}} Height="300" cursOver={"Click for our Gallery!"}/></a>
+               <Imaginationg/>
+               
           </>
      );
 }
