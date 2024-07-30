@@ -9,8 +9,8 @@ import num16 from "./assets/0016.webp";
 import num5 from "./assets/005.webp";
 import num17 from "./assets/0017.webp";
 import num14 from "./assets/0014.webp";
-import num3 from "./assets/003.webp";
-import num26 from "./assets/0026.webp";
+import num3 from "./assets/2003.webp";
+import num26 from "./assets/20026.webp";
 //0016 for trimming button
 //005 for mulching
 //0017 for design
@@ -84,7 +84,7 @@ const SquareF2=styled(SquareFrame)`
      align-self:center;
      img{
           height:auto;
-          max-width:200%;
+          max-width:100%;
           align-self: center;
      }
 `;

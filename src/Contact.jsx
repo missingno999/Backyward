@@ -62,7 +62,7 @@ function Contact(){
                          backyardhavens@gmail.com
                     </ContactDiv>
                     <ContactDiv title="Service Area">
-                         We service the Madison, WI area.
+                         We service the greater Madison, WI area.
                     </ContactDiv>
                </Divv>
                <Divv color='#f7f7f7' bord="groove">

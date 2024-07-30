@@ -3,7 +3,7 @@ import {useState} from "react";
 
 import MainHeader from "./MainHeader.jsx";
 import Pagepichead from "./Pagepichead.jsx";
-import Placeholder from "./assets/Placeholder.png";
+import num30 from "./assets/0030.webp";
 import {IntroPara} from "./GlobalComponents.jsx";
 
 const BackDrop=styled.div`
@@ -95,7 +95,7 @@ function FAQ(){
      return(
           <>
                <MainHeader/>
-               <Pagepichead backing={Placeholder}>
+               <Pagepichead backing={num30}>
                     FAQ
                </Pagepichead>
                <IntroPara>

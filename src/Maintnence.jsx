@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import num13 from "./assets/0013.webp";
+import num13 from "./assets/20013.webp";
 
 import Pagepichead from "./Pagepichead.jsx";
 import MainHeader from "./MainHeader.jsx";

@@ -3,12 +3,17 @@ import {useState} from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import Pagepichead from "./Pagepichead.jsx";
+import MainHeader from "./MainHeader.jsx";
 
-import Placeholder from "./assets/Placeholder.png";
+import num20A from "./assets/20020.webp";
+import num12 from "./assets/0012.webp";
+import num20 from "./assets/0020.webp";
+import num21 from "./assets/0021.webp";
+import num2 from "./assets/2002.webp";
 import logo from "./assets/logo.webp"
 import icon from "./assets/icon.webp"
 
-import MainHeader from "./MainHeader.jsx"
+
 import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
 import {IntroPara,ParaButton,Df} from "./GlobalComponents.jsx";
 
@@ -16,8 +21,8 @@ function Carousel(){
      const [visi,setVisi]=useState({vis: false, in: 0})
      return(
      <>
-          <ImageCarousel imageList={[Placeholder,logo,icon,icon]} autoNextDuration="5000" controlType="both" Title="A look at our displays" toFull={setVisi} Height="300"/>
-          <FullScreenCarousel isVisi={visi.vis} imageList={[Placeholder,logo,icon,icon]} subtitleList={[]} Title="A look at our display" itemIndex={visi.in} fromFull={setVisi}/>
+          <ImageCarousel imageList={[num2,logo,icon,icon]} autoNextDuration="5000" controlType="both" Title="A look at our displays" toFull={setVisi} Height="300"/>
+          <FullScreenCarousel isVisi={visi.vis} imageList={[num2,logo,icon,icon]} subtitleList={[]} Title="A look at our display" itemIndex={visi.in} fromFull={setVisi}/>
      </>
      )
 }
@@ -97,7 +102,7 @@ function Designandinstall(){
      return(
           <>
           <MainHeader/>
-               <Pagepichead backing={Placeholder}>
+               <Pagepichead backing={num20A}>
                     Design and Installation
                </Pagepichead>
                <IntroPara>
@@ -116,7 +121,7 @@ function Designandinstall(){
 
                     buttons={
                          <>
-                              <img src={Placeholder}></img>
+                              <img src={num12}></img>
                          </>
                     }
                     spacerShrinks={[1.6,1.7,1.6]}
@@ -134,7 +139,7 @@ function Designandinstall(){
 
                     buttons={
                               <>
-                                   <img src={Placeholder}></img>
+                                   <img src={num20}></img>
                               </>
                          }
                     spacerShrinks={[(formatFIx ? 1.5:1.6),1.7,1.6]}
@@ -152,7 +157,7 @@ function Designandinstall(){
 
                     buttons={
                               <>
-                                   <img src={Placeholder}></img>
+                                   <img src={num21}></img>
                               </>
                          }
                     spacerShrinks={[1.6,1.7,1.6]}
@@ -172,7 +177,7 @@ function Designandinstall(){
                          }
                          buttons={
                               <>
-                                   <img src={Placeholder}></img>
+                                   <img src={num2}></img>
                               </>
                          }
                          spacerShrinks={[1.4,1.6,1.4]}

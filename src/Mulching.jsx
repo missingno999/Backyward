@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useMediaQuery } from 'react-responsive';
 
-import num22 from "./assets/0022.webp";
+import num28 from "./assets/20028.webp";
 import num15 from "./assets/0015.webp";
 import num14 from "./assets/0014.webp";
 import num13 from "./assets/0013.webp";
@@ -68,7 +68,7 @@ function Mulching(){
      return(
           <>
                <MainHeader/>
-               <Pagepichead backing={num22}>
+               <Pagepichead backing={num28}>
                     Mulching
                </Pagepichead>
                <IntroPara>

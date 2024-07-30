@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 import MainHeader from "./MainHeader.jsx";
-
 import Pagepichead from "./Pagepichead.jsx";
-import Placeholder from "./assets/Placeholder.png";
+
+import num7 from "./assets/2007.webp";
 
 import {IntroPara,ParaButton,SquareFrame} from "./GlobalComponents.jsx";
 
@@ -73,7 +73,7 @@ function About(){
      return(
           <>
                <MainHeader/>
-               <Pagepichead backing={Placeholder}>
+               <Pagepichead backing={num7}>
                     About Us
                </Pagepichead>
                <IntroPara>
@@ -91,7 +91,7 @@ function About(){
                     buttons={
                               <>
                                    <SquareF2>
-                                        <img src={Placeholder}></img>
+                                        <img src={num7}></img>
                                    </SquareF2>
                               </>
                          }
@@ -110,7 +110,7 @@ function About(){
                     buttons={
                               <>
                                    <SquareF2>
-                                        <img src={Placeholder}></img>
+                                        <img src={num7}></img>
                                    </SquareF2>
                               </>
                          }

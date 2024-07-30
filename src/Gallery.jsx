@@ -3,18 +3,18 @@ import styled from "styled-components";
 import {useState} from 'react';
 
 import MainHeader from "./MainHeader.jsx";
-
 import Pagepichead from "./Pagepichead.jsx";
-import Placeholder from "./assets/Placeholder.png";
-import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
 
-import {WrappingDiv,WrappedButtons,IntroPara} from "./GlobalComponents.jsx";
-
+import num29 from "./assets/0029.webp";
 import logo from "./assets/001.webp";
 import icon from "./assets/icon.webp";
 
-const imgListA=[{index:0, src: Placeholder},{index:1, src: logo},{index:2, src: icon},{index:3, src: logo}];
-const imgListB=[Placeholder,logo,icon,logo];
+import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
+import {WrappingDiv,WrappedButtons,IntroPara} from "./GlobalComponents.jsx";
+
+
+const imgListA=[{index:0, src: num29},{index:1, src: logo},{index:2, src: icon},{index:3, src: logo}];
+const imgListB=[num29,logo,icon,logo];
 
 const WB2=styled(WrappedButtons)`
      width:200px;
@@ -56,7 +56,7 @@ function Gallery(){
           <>
                <FullScreenCarousel isVisi={visi.vis} imageList={imgListB} subtitleList={[]} Title="" itemIndex={visi.in} fromFull={setVisi}/>
                <MainHeader/>
-               <Pagepichead backing={Placeholder}>
+               <Pagepichead backing={num29}>
                     Gallery
                </Pagepichead>
                <IntroPara>

@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import {useState} from 'react';
-import axios from "axios"
+import axios from "axios";
 import { useMediaQuery } from 'react-responsive';
 
 import MainHeader from "./MainHeader.jsx";
-
 import Pagepichead from "./Pagepichead.jsx";
-import Placeholder from "./assets/Placeholder.png";
+import num30 from "./assets/0030.webp";
 
 import {ParaButton,PurpButt} from "./GlobalComponents.jsx";
 
@@ -174,7 +173,7 @@ function ContactUs(){
      return(
           <>
                <MainHeader/>
-               <Pagepichead backing={Placeholder}>
+               <Pagepichead backing={num30}>
                     Contact Us!
                </Pagepichead>
                <Hr/>
