@@ -1,15 +1,24 @@
 import {useState} from 'react';
-import Pagepichead from "./Pagepichead.jsx";
 import styled from "styled-components";
 
-import Placeholder from "./assets/Placeholder.png";
+import HeadPic from "./assets/0016.webp";
+import A from "./assets/Pruning/1.webp";
+import B from "./assets/Pruning/2.webp";
+import C from "./assets/Pruning/3.webp";
+import D from "./assets/Pruning/4.webp";
+import E from "./assets/Pruning/5.webp";
+import F from "./assets/Pruning/6.webp";
+import G from "./assets/Pruning/7.webp";
+import H from "./assets/Pruning/8.webp";
+import L from "./assets/Pruning/9.webp";
 
 import MainHeader from "./MainHeader.jsx";
-import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
+import Pagepichead from "./Pagepichead.jsx";
 
+import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
 import {FullWidthParagraph,IntroPara} from "./GlobalComponents.jsx";
 
-const imageList=[Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder];
+const imageList=[A,B,C,D,E,F,G,H,L];
 const subList=["Grafted crabapple with overgrown water shoots from the root stock.","Grafted crabapple after water shoots have been removed.","This Sand Cherry needs to be re-sized and shaped.","Sand Cherry after pruning.","This Burning Bush has overgrown its space.","Burning Bush after pruning.","Overgrown and leggy willow.","Willow immediately after pruning.","Same willow approximately 6 weeks after pruning."];
 
 function Carousel(){
@@ -36,7 +45,7 @@ function Pruning(){
      return(
           <>
           <MainHeader/>
-          <Pagepichead backing={Placeholder}>
+          <Pagepichead backing={HeadPic}>
                Pruning & Trimming
           </Pagepichead>
           <IntroPara>

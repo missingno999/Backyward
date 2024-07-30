@@ -1,10 +1,8 @@
-
-import Pagepichead from "./Pagepichead.jsx";
 import styled from "styled-components";
 
+import num13 from "./assets/0013.webp";
 
-import Placeholder from "./assets/Placeholder.png";
-
+import Pagepichead from "./Pagepichead.jsx";
 import MainHeader from "./MainHeader.jsx";
 import {PurpButt,IntroPara} from "./GlobalComponents.jsx";
 
@@ -84,7 +82,7 @@ function Maintnence(){
      return(
           <>
           <MainHeader/>
-          <Pagepichead backing={Placeholder}>
+          <Pagepichead backing={num13} repeating={true}>
                Maintnence
           </Pagepichead>
           <IntroPara>

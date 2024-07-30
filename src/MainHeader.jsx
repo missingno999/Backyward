@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import LogoPlus from "./logoPlus.jsx";
 import ham from "./assets/ham.webp";
 
-import HeadLinkRow from "./HeaderLinks.jsx";
+import {HeadLinkRow} from "./GlobalComponents.jsx";
 import MobNav from "./mobileNavigation.jsx";
 
 

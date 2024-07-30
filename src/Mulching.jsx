@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { useMediaQuery } from 'react-responsive';
 
-import Placeholder from "./assets/Placeholder.png";
+import num22 from "./assets/0022.webp";
+import num15 from "./assets/0015.webp";
+import num14 from "./assets/0014.webp";
+import num13 from "./assets/0013.webp";
+
 import Pagepichead from "./Pagepichead.jsx";
-import MainHeader from "./MainHeader.jsx"
+import MainHeader from "./MainHeader.jsx";
+
 import {ParaButton,IntroPara} from "./GlobalComponents.jsx";
 
 const ParaButtonStyled=styled(ParaButton)`
@@ -63,7 +68,7 @@ function Mulching(){
      return(
           <>
                <MainHeader/>
-               <Pagepichead backing={Placeholder}>
+               <Pagepichead backing={num22}>
                     Mulching
                </Pagepichead>
                <IntroPara>
@@ -83,7 +88,7 @@ function Mulching(){
 
                     buttons={
                               <>
-                                   <img src={Placeholder}></img>
+                                   <img src={num15}></img>
                               </>
                          }
                     spacerShrinks={[1.4,1.6,1.4]}
@@ -103,7 +108,7 @@ function Mulching(){
 
                     buttons={
                               <>
-                                   <img src={Placeholder}></img>
+                                   <img src={num14}></img>
                               </>
                          }
                     spacerShrinks={[1.4,1.6,1.4]}
@@ -123,7 +128,7 @@ function Mulching(){
 
                     buttons={
                               <>
-                                   <img src={Placeholder}></img>
+                                   <img src={num13}></img>
                               </>
                          }
                     spacerShrinks={[1.4,1.6,1.4]}

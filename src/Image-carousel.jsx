@@ -133,7 +133,6 @@ const Exit=styled(SquareFrame)`
 `;
 
 const FullImg=styled.img`
-
      transform: scale(${(props)=>(`${props.zoom},${props.zoom}`)}) translate(${(props)=>(`${props.X}px,${props.Y}px`)});
 `;
 //IMPORTANT NOTE: Come back later and consider using vine sihlouette images to add a sort of border to the slide show. Otherwise, it looks really plain and kinda abrupt

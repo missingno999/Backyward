@@ -10,8 +10,8 @@ import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
 
 import {WrappingDiv,WrappedButtons,IntroPara} from "./GlobalComponents.jsx";
 
-import logo from "./assets/logo.png";
-import icon from "./assets/icon.png";
+import logo from "./assets/001.webp";
+import icon from "./assets/icon.webp";
 
 const imgListA=[{index:0, src: Placeholder},{index:1, src: logo},{index:2, src: icon},{index:3, src: logo}];
 const imgListB=[Placeholder,logo,icon,logo];

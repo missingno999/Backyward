@@ -1,14 +1,26 @@
-import LogoPlus from "./logoPlus.jsx";
-import Placeholder from "./assets/Placeholder.png";
-
 import styled from "styled-components";
 import {useState} from 'react';
 import { useMediaQuery } from 'react-responsive'
 
+import LogoPlus from "./logoPlus.jsx";
+import MainHeader from "./MainHeader.jsx";
+
+import num16 from "./assets/0016.webp";
+import num5 from "./assets/005.webp";
+import num17 from "./assets/0017.webp";
+import num14 from "./assets/0014.webp";
+import num3 from "./assets/003.webp";
+import num26 from "./assets/0026.webp";
+//0016 for trimming button
+//005 for mulching
+//0017 for design
+//0014 for maintnence
+//003 for background
+//0026 for Philosophy
+
+
 import {ImageCarousel,FullScreenCarousel} from "./Image-carousel.jsx";
-import MainHeader from "./MainHeader.jsx"
-import HeadLinkRow from "./HeaderLinks.jsx";
-import {IntroPara,ParaButton,PurpButt,SquareFrame,WrappingDiv,WrappedButtons} from "./GlobalComponents.jsx";
+import {HeadLinkRow,IntroPara,ParaButton,PurpButt,SquareFrame,WrappingDiv,WrappedButtons} from "./GlobalComponents.jsx";
 import {imgListB} from "./Gallery.jsx";
 
 import './App.css';
@@ -235,16 +247,13 @@ function Imaginationg(){
 }
 
 function Home() {
-
      const mobile=useMediaQuery({query:'(max-width: 768px)'});
      const reallyMobile=useMediaQuery({query:'(max-width: 490px)'});
-
-
 
      return (
           <>
           <MainHeader homePageProp={1}/>
-               <HomeBack b={Placeholder}>
+               <HomeBack b={num3}>
                {!mobile ?
                     <>
                          <header id="home">
@@ -283,7 +292,7 @@ function Home() {
                     buttons={
                               <>
                                    <SquareF2>
-                                        <img src={Placeholder}></img>
+                                        <img src={num26}></img>
                                    </SquareF2>
                                    <a href="/About"><PurpButt Title="Learn who we are">Learn More {">>>"}</PurpButt></a>
                               </>
@@ -298,7 +307,7 @@ function Home() {
                     <>
                          <a href='/Design'>
                          <WB2 Title="Click to learn more">
-                              <img src={Placeholder}></img>
+                              <img src={num17}></img>
                               <div>
                                    <h4>Design</h4>
                                    <p>We do designs!</p>
@@ -308,7 +317,7 @@ function Home() {
                          </a>
                          <a href='/Maintnence'>
                          <WB2 Title="Click to learn more">
-                              <img src={Placeholder}></img>
+                              <img src={num14}></img>
                               <div>
                                    <h4>Maintnence</h4>
                                    <p>We maintain!</p>
@@ -318,7 +327,7 @@ function Home() {
                          </a>
                          <a href='/Maintnence/Mulching'>
                          <WB2 Title="Click to learn more">
-                              <img src={Placeholder}></img>
+                              <img src={num5}></img>
                               <div>
                                    <h4>Mulch</h4>
                                    <p>We mulch!</p>
@@ -328,7 +337,7 @@ function Home() {
                          </a>
                          <a href='/Maintnence/Pruning'>
                          <WB2 Title="Click to learn more">
-                              <img src={Placeholder}></img>
+                              <img src={num16}></img>
                               <div>
                                    <h4>Trimming</h4>
                                    <p>We do it all!</p>
@@ -339,22 +348,22 @@ function Home() {
                     </>
                :
                     <>
-                         <CollapsibleButtons image={Placeholder} linked={'/Design'}>
+                         <CollapsibleButtons image={num17} linked={'/Design'}>
                               <h4 >Design</h4>
                               <p>We do designs!</p>
                          </CollapsibleButtons>
 
-                         <CollapsibleButtons image={Placeholder} linked={'/Maintnence'}>
+                         <CollapsibleButtons image={num14} linked={'/Maintnence'}>
                               <h4>Maintnence</h4>
                               <p>We maintain!</p>
                          </CollapsibleButtons>
 
-                         <CollapsibleButtons image={Placeholder} linked={'/Maintnence/Mulching'}>
+                         <CollapsibleButtons image={num5} linked={'/Maintnence/Mulching'}>
                               <h4>Mulch</h4>
                               <p>We mulch!</p>
                          </CollapsibleButtons>
 
-                         <CollapsibleButtons image={Placeholder} linked={'/Maintnence/Pruning'}>
+                         <CollapsibleButtons image={num16} linked={'/Maintnence/Pruning'}>
                               <h4>Trimming</h4>
                               <p>We do it all!</p>
                          </CollapsibleButtons>
@@ -363,7 +372,7 @@ function Home() {
                }
                </WrappingDiv>
                <Imaginationg/>
-               
+
           </>
      );
 }
