@@ -252,7 +252,7 @@ function Home() {
 
      return (
           <>
-          <link rel="preload" as="image" href="./assets/2003.webp"/>
+          <link rel="preload" as="image" href={num26}/>
           <MainHeader homePageProp={1}/>
                <HomeBack b={num3}>
                {!mobile ?
