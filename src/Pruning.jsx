@@ -32,6 +32,13 @@ function Carousel(){
 }
 
 const Fullllll=styled(FullWidthParagraph)`
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+     p{
+          margin-top:10px;
+          margin-bottom:10px;
+     }
      @media(max-width:769px){
           p{
                padding-left: 8%;

@@ -114,6 +114,7 @@ const MainDiv=styled.div`
 const TitleCounter=styled.div`
 
      font-family: Courgette-Regular;
+     padding:3px;
      color: #783aad;
      width:100%;
      text-align: center;
@@ -318,7 +319,7 @@ function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullSc
 
      return(
           <>
-          <div style={{maxHeight: window.innerHeight}} className={className} onTouchStart={(e)=>(setSwipe(e),(e.touches.length>=2 && setPinch({x1: e.touches[0].clientX-e.touches[1].clientX, y1: e.touches[0].clientY-e.touches[1].clientY})))}
+          <div style={{maxHeight: window.innerHeight,marginTop:10}} className={className} onTouchStart={(e)=>(setSwipe(e),(e.touches.length>=2 && setPinch({x1: e.touches[0].clientX-e.touches[1].clientX, y1: e.touches[0].clientY-e.touches[1].clientY})))}
           onTouchMove={(e)=>(onTouchyMoving(e))} onTouchEnd={(e)=>(setDrag(false),setMOX(-1*transX),setMOY(-1*transY),endFUnc(e))}
           onMouseUp={()=>(setDrag(false),setMOX(-1*transX),setMOY(-1*transY))} onMouseMove={(e)=>(clickDrag && (setX(e.clientX-X1),setY(e.clientY-Y1)))}>
 

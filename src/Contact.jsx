@@ -39,9 +39,10 @@ function ContactDiv(props){
 
 const Divv=styled.div`
           background-color:${(props)=>(props.color)};
-          display: block flex;
+          display: flex;
           justify-content:space-evenly;
           border-top-style:${(props)=>(props.bord)};
+          border-color:#dbc1af;
           @media (max-width:660px){
                flex-wrap:wrap;
           }
@@ -65,7 +66,7 @@ function Contact(){
                          We service the greater Madison, WI area.
                     </ContactDiv>
                </Divv>
-               <Divv color='#f7f7f7' bord="groove">
+               <Divv color='#dbc1af' bord="groove">
                     <p>Copyright © 2021 Backyard Havens Gardening & Landscaping - All Rights Reserved.</p>
                </Divv>
           </>

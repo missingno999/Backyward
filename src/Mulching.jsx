@@ -33,8 +33,11 @@ const ParaButtonStyled=styled(ParaButton)`
      }
      img{
           max-width: 100%;
-          max-height: 75%;
+          max-height: 90%;
           align-self: center;
+          @media(max-width:1600px){
+               max-height: 75%;
+          }
      }
      div#Para{
           align-items:center;
@@ -65,6 +68,7 @@ const ParaButtonStyled=styled(ParaButton)`
 
 function Mulching(){
      const nummm=useMediaQuery({query:'(max-width:769px)'});
+     const nummm2=useMediaQuery({query:'(max-width:1600px)'});
      return(
           <>
                <MainHeader/>
@@ -91,7 +95,7 @@ function Mulching(){
                                    <img src={num15}></img>
                               </>
                          }
-                    spacerShrinks={[1.4,1.6,1.4]}
+                    spacerShrinks={[1.4,!nummm2 ? 1.8:1.6, 1.4]}
                     nthBool={!nummm}
                     maxWidth={'769'}
                />
@@ -111,7 +115,7 @@ function Mulching(){
                                    <img src={num14}></img>
                               </>
                          }
-                    spacerShrinks={[1.4,1.6,1.4]}
+                    spacerShrinks={[1.4,!nummm2 ? 1.8:1.6,1.4]}
                     nthBool={false}
                     maxWidth={'769'}
                />
@@ -131,7 +135,7 @@ function Mulching(){
                                    <img src={num13}></img>
                               </>
                          }
-                    spacerShrinks={[1.4,1.6,1.4]}
+                    spacerShrinks={[1.4,!nummm2 ? 1.8:1.6,1.4]}
                     nthBool={!nummm}
                     maxWidth={'769'}
                />

@@ -9,7 +9,7 @@ import num16 from "./assets/0016.webp";
 import num5 from "./assets/005.webp";
 import num17 from "./assets/0017.webp";
 import num14 from "./assets/0014.webp";
-import num3 from "./assets/2003.webp";
+import num3 from "./assets/22003.webp";
 import num26 from "./assets/20026.webp";
 //0016 for trimming button
 //005 for mulching
@@ -44,6 +44,8 @@ const IP2=styled(IntroPara)`
 
 const HomeBack=styled.div`
      background-image:url(${(props)=>(props.b)});
+     background-size:cover;
+     background-repeat:no-repeat;
      width:100%;
      height:100vh;
      div#phoneNum{
@@ -301,7 +303,7 @@ function Home() {
                                    <a href="/About"><PurpButt Title="Learn who we are">Learn More {">>>"}</PurpButt></a>
                               </>
                          }
-                    spacerShrinks={[5,4,5]}
+                    spacerShrinks={[5,5.7,5.2]}
                     nthBool={false}
                     maxWidth={"521"}
                />

@@ -47,7 +47,10 @@ const ParaButtonStyled=styled(ParaButton)`
      }
      img{
           max-width: 100%;
-          max-height: 75%;
+          max-height: 100%;
+          @media (max-width:1400px){
+               max-height:80%;
+          }
           align-self: center;
      }
      div#Para{

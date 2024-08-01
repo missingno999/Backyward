@@ -10,7 +10,7 @@ import {PurpButt,IntroPara} from "./GlobalComponents.jsx";
 const Divvy=styled.div`
      display: flex;
      background-color: #f7f7f7;
-     justify-content: space-evenly;
+     justify-content: center;
      @media(max-width:950px){
           flex-direction:column;
      }
@@ -31,12 +31,14 @@ const Divvy=styled.div`
           max-width: 200px;
           display: flex;
           flex-direction: column;
+          margin-left:3%;
           @media(max-width:950px){
                flex-direction:row;
                max-width:100%;
                align-items:stretch;
                justify-content:space-evenly;
                margin-bottom: 10px;
+               margin-left:0;
           }
           @media(max-width:351px){
                flex-direction: column;
@@ -67,7 +69,7 @@ const Divvy=styled.div`
           div+div{
                margin-top:10%;
                @media(max-width:950px){
-                    display: block flex;
+                    display: flex;
                     flex-direction:column;
                     margin-top:0px;
                     justify-content:space-between;

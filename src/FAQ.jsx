@@ -7,7 +7,19 @@ import num30 from "./assets/0030.webp";
 import {IntroPara} from "./GlobalComponents.jsx";
 
 const BackDrop=styled.div`
-     padding: 5%;
+     padding: 32.8px;
+     @media(max-width:500px){
+          padding:5%;
+     }
+     display:flex;
+     flex-direction:row;
+     justify-content:center;
+     div#limiter{
+          display:flex;
+          flex-direction:column;
+          max-width:1000px;
+          flex-grow:1;
+     }
      div:nth-last-child(1 of div#false){
           border-radius: 0% 0% 20px 20px;
           border-bottom-style:solid;
@@ -102,21 +114,23 @@ function FAQ(){
                     Some answers to common questions!
                </IntroPara>
                <BackDrop>
-                    <CollapsibleDiv styling={true} Q="What kind of landscaping do you do?">
-                         Our specialty is garden maintenance and renovation. We offer spring and fall clean-ups, regular garden maintenance including pulling weeds by hand, pruning and trimming. Our approach to garden renovations is to work with the existing garden plants to bring back their beauty, removing any that no long work while adding in new ones to give the garden a fresh look.
-                    </CollapsibleDiv>
-                    <CollapsibleDiv styling={false} Q="Are you insured and licensed?">
-                         We are fully insured for all of our projects. Our herbicide applicators are certified by the state of Wisconsin to apply herbicides and fertilizers. However, we use herbicide as sparingly as possible as we prefer to hand weed.
-                    </CollapsibleDiv>
-                    <CollapsibleDiv styling={true} Q="Do you install hardscape projects?">
-                         We can install flagstone stepper walkways, paver and natural stone walkways up to 40', small patios, fire pit kits, dry river beds and rain gardens. However, we are not able to install large scale hardscape projects.
-                    </CollapsibleDiv>
-                    <CollapsibleDiv styling={false} Q="Do you mow lawns or provide lawncare?">
-                         No, we do not offer these as regular services. We may mow or apply fertilizer in a special situation. However, we do offer lawn edging as a regular service and occasionally will offer lawn aeration.
-                    </CollapsibleDiv>
-                    <CollapsibleDiv styling={true} Q="Do you offer snow removal services?">
-                          No, we do not offer any snow removal services.
-                    </CollapsibleDiv>
+                    <div id="limiter">
+                         <CollapsibleDiv styling={true} Q="What kind of landscaping do you do?">
+                              Our specialty is garden maintenance and renovation. We offer spring and fall clean-ups, regular garden maintenance including pulling weeds by hand, pruning and trimming. Our approach to garden renovations is to work with the existing garden plants to bring back their beauty, removing any that no long work while adding in new ones to give the garden a fresh look.
+                         </CollapsibleDiv>
+                         <CollapsibleDiv styling={false} Q="Are you insured and licensed?">
+                              We are fully insured for all of our projects. Our herbicide applicators are certified by the state of Wisconsin to apply herbicides and fertilizers. However, we use herbicide as sparingly as possible as we prefer to hand weed.
+                         </CollapsibleDiv>
+                         <CollapsibleDiv styling={true} Q="Do you install hardscape projects?">
+                              We can install flagstone stepper walkways, paver and natural stone walkways up to 40', small patios, fire pit kits, dry river beds and rain gardens. However, we are not able to install large scale hardscape projects.
+                         </CollapsibleDiv>
+                         <CollapsibleDiv styling={false} Q="Do you mow lawns or provide lawncare?">
+                              No, we do not offer these as regular services. We may mow or apply fertilizer in a special situation. However, we do offer lawn edging as a regular service and occasionally will offer lawn aeration.
+                         </CollapsibleDiv>
+                         <CollapsibleDiv styling={true} Q="Do you offer snow removal services?">
+                               No, we do not offer any snow removal services.
+                         </CollapsibleDiv>
+                    </div>
                </BackDrop>
           </>
      )

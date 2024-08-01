@@ -9,7 +9,6 @@ const DaHead=styled.div`
      width:100%;
      height:20vh;
      min-height:3em;
-
      div{
           display:flex;
           justify-content:center;

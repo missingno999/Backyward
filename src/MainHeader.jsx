@@ -36,7 +36,7 @@ const MainHead=styled.header`
           flex-grow:0.2;
      }
      div{
-          display:block flex;
+          display:flex;
           flex-shrink:1;
      }
 

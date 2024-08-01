@@ -116,7 +116,7 @@ const headerThemeing={
 }
 
 const DivId1=styled.div`
-     display:block flex;
+     display:flex;
      flex-grow:1; /*used in row component*/
      flex-shrink:1;
      justify-content:space-around;
@@ -168,12 +168,12 @@ const SpacerDiv=styled.div`
 
 
 const ParaButt=styled.div`
-     display:block flex;
+     display:flex;
      font-size:20px;
      flex-direction:row;
      background-color:#f7f7f7;
      div#Para{
-          display:block flex;
+          display:flex;
           flex-direction:column;
           font-family:Gentium-Plus;
           justify-content:center;
@@ -183,7 +183,7 @@ const ParaButt=styled.div`
           }
      }
      div#Butt{
-          display:block flex;
+          display:flex;
           flex-direction:column;
           justify-content:space-around;
 
@@ -273,6 +273,7 @@ const FullWidthParagraph=styled.div`
           padding-right:16%;
           text-align:center;
           font-size:20px;
+          max-width:1000px;
      }
      b{
           font-family:Times New Roman;
@@ -281,6 +282,12 @@ const FullWidthParagraph=styled.div`
 `;
 
 const Adosdo=styled(FullWidthParagraph)`
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+     p{
+          max-width:1000px;
+     }
      b{
           font-family:Gentium-Plus;
      }
