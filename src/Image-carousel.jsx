@@ -36,7 +36,7 @@ const FullVersion=styled(ImageCarousel)`
                          display: initial !important;
                     }
                     div#sub{
-                         background-image:radial-gradient(rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/0%), rgb(219 193 175/0%));
+                         background-image:radial-gradient(rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/0%));
                     }
                }` : `
                &,& *{

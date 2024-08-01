@@ -8,25 +8,27 @@ const Df=styled.span`
 `;
 
 const HeaderLinks=styled.a`
-transition-property:color,background-size;
-background-position:center;
-background-image:radial-gradient(rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/0%), rgb(219 193 175/0%));
-background-repeat:no-repeat;
-background-size:0px 130%;
-background-clip:padding-box;
-transition-duration:300ms,600ms;
-color:#f7f7f7;
-flex-grow:1;
-font-size:20px;
-text-align:center;
-text-decoration:none;
+     transition-property:color,background-size,text-shadow;
+     background-position:center;
+     background-image:radial-gradient(rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/100%), rgb(219 193 175/0%), rgb(219 193 175/0%));
+     background-repeat:no-repeat;
+     background-size:0px 130%;
+     background-clip:padding-box;
+     transition-duration:300ms,600ms,300ms;
+     color:#f7f7f7;
+     flex-grow:1;
+     font-size:20px;
+     text-align:center;
+     text-decoration:none;
 
-@media(hover:hover){
-     &:hover{
-          background-size:100% 130%;
-          color:${(props)=>(props.theme.tcolo)};
+
+     @media(hover:hover){
+          &:hover{
+               text-shadow:none;
+               background-size:100% 130%;
+               color:${(props)=>(props.theme.tcolo)};
+          }
      }
-}
 `;
 
 
@@ -214,11 +216,11 @@ const PurpleButton=styled.button`
      font-size: 23px;
      width:100%;
      border-radius:50px;
-     background-color:#783aad;
+     background-color:#ad3aa9;
      cursor: pointer;
      color: #f7f7f7;
      &&:hover{
-          background-color:#b083d8;
+          background-color:#d67ed3;
      }
      &&:focus{
           text-decoration:underline;

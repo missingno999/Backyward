@@ -18,6 +18,7 @@ const DaHead=styled.div`
           width:100%;
           backdrop-filter:blur(10px);
           font-family:Courgette-Regular;
+          text-shadow: #f7f7f7 0px 0 2px, #f7f7f7 0px 0 10px;
      }
 
 `;

@@ -13,14 +13,14 @@ app.post('/',async (req,res)=>{
           port: 587,
           secure: false, // use SSL
           auth: {
-               user: 'ericandmario',
-               pass: 'hwjbivmjzcogxshw',//Set this up in Google Account. It's the App Password option
+               user: process.argv[0],
+               pass: process.argv[1],//Set this up in Google Account. It's the App Password option
                }
           })
 
      const mailOptions = {
-          from: 'ericandmario@gmail.com',
-          to: 'ericandmario@gmail.com',
+          from: `${process.argv[0]}@gmail.com`,
+          to:  `${process.argv[0]}@gmail.com`,
           cc: [req.body.email],
           subject: `${req.body.name} sent an email`,
           text: req.body.MMess

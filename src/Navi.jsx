@@ -21,6 +21,7 @@ dark brown: #ba9979
 light brown: #dbc1af
 Dark purple: #783aad
 light purple: #b083d8
+Dark magenta: #ad3aa9
 Text black: Default text color
 */
 

@@ -2,6 +2,18 @@ import styled from "styled-components";
 import {useState} from "react";
 import {Df} from "./GlobalComponents.jsx";
 
+const BlackDiv=styled.div`
+     transition-property:width;
+     transition-duration:600ms;
+     transition-timing-function:ease-out;
+     position:fixed;
+     background-color: black;
+     opacity:50%;
+     width:${(props)=>((props.State || props.h==1) ? "0px":"100vw")};
+     height:100vh;
+     z-index:1;
+`;
+
 const Ul=styled.ul`
      transition-property:transform;
      transition-duration:1s;
@@ -60,7 +72,7 @@ const Ul=styled.ul`
      }
 `;
 
-function MobNav({state,h=0,className}){
+function MobNav({state,h=0,className,close=()=>{}}){
      const [subDiv,setDiv]=useState(false);
      var tabby=(!state ? "0":"-1");
 
@@ -78,6 +90,7 @@ function MobNav({state,h=0,className}){
                     <a tabindex={tabby} href='/FAQ'><li>FAQ</li></a>
                     <a tabindex={tabby} href='/ContactUs'><li>Contact</li></a>
                </Ul>
+               <BlackDiv id="clickable" State={state} h={h} onClick={()=>(close(true))}/>
           </>
      );
 }

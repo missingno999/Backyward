@@ -65,6 +65,9 @@ const MobileHomeUL=styled(MobNav)`
      *{
           background:none;
      }
+     &~div#clickable{
+          position:absolute;
+     }
 `;
 
 
@@ -109,7 +112,7 @@ function MainHeader({homePageProp=0,className,homePageProp2=0}){
                </>
           }
           </MainHead>
-          {mobile && (homePageProp2!=0 ? <MobileHomeUL state={open} h={hidden}/>:<MobNav state={open} h={hidden} />)}
+          {mobile && (homePageProp2!=0 ? <MobileHomeUL state={open} close={setOpen} h={hidden}/>:<MobNav state={open} close={setOpen} h={hidden} />)}
           </>
      )
 }

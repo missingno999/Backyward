@@ -9,7 +9,7 @@ header#home{
      background-size: 100% 200%;
      flex-direction: column;
      justify-content: center;
-
+     text-shadow: black 0px 0 2px;
      div{
           display: block flex;
           align-self: center;

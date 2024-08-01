@@ -47,6 +47,7 @@ const HomeBack=styled.div`
      width:100%;
      height:100vh;
      div#phoneNum{
+          text-shadow: black 0px 0 2px;
           z-index:30;
           display: flex;
           position:absolute;
@@ -138,6 +139,8 @@ const WB2=styled(WrappedButtons)`
      background-color: #ba9979;
      justify-content: space-around;
      img{
+          transition-propery: filter;
+          transition-duration:200ms;
           height:190px;/*${(props)=>(props.open ? "190px" : "100%")}*/
      }
      div{
@@ -151,9 +154,9 @@ const WB2=styled(WrappedButtons)`
           height:50%;
           width:100%;
           h4{
-               transition-property: transform;
+               transition-property: transform,text-shadow;
                transition-duration:200ms;
-               ${(props)=>(!props.open && 'transform:translate(0px,calc(-145px + -3em));')}
+               ${(props)=>(!props.open && 'transform:translate(0px,calc(-145px + -3em)); text-shadow: #dbc1af 0px 0 2px,#dbc1af 0px 0 5px;')}
                font-family: Times New Roman;
                font-size: 23px;
                margin-block-start:1em;
@@ -181,7 +184,7 @@ function CollapsibleButtons({image,children,linked}){
           <>
                <span onClick={()=>(!isOpen && (setOpened(!isOpen),sa(true) ))}>
                     <WB2 Title="Click to learn more" open={isOpen} overA={a} touchStart={(function(n,a){n(!a ? "transform: scale(0.9); transition-duration:90ms,200ms;" : "")})}>
-                         <img src={image} onTouchStart={()=>(isOpen && sa(false))} onClick={()=>(setOpened(!isOpen))}></img>
+                         <img src={image} style={!isOpen ? {filter: "blur(1px)"}:{filter: "blur(0px)"}} onTouchStart={()=>(isOpen && sa(false))} onClick={()=>(setOpened(!isOpen))}></img>
                          <div>
                               {children}
                               <a href={linked}> <PurpButt>Learn More{">>>"}</PurpButt></a>
