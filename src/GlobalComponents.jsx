@@ -128,21 +128,21 @@ const DivId1=styled.div`
 function HeadLinkRow({offset="30", homeStuff="", theme=headerThemeing}){
      return(
           <DivId1>
-               <HeaderLinks href="#/Home" title="Home" theme={theme}>Home</HeaderLinks>
-               <HeaderLinks href="#/Design" title="Design" theme={theme}>Design</HeaderLinks>
+               <HeaderLinks href="/Home" title="Home" theme={theme}>Home</HeaderLinks>
+               <HeaderLinks href="/Design" title="Design" theme={theme}>Design</HeaderLinks>
                <MaintnenceDiv>
                     <div id="spacer"></div> {/*devious way to keep the Maintnence link in the center*/}
-                    <HeaderLinks href="#/Maintnence" title="Maintnence" theme={theme}>Maintnence</HeaderLinks>
+                    <HeaderLinks href="/Maintnence" title="Maintnence" theme={theme}>Maintnence</HeaderLinks>
                     <HiddenList offset={offset} homeStuff={homeStuff} theme={theme}>
-                         <li><Df>m</Df><HeaderLinks href="#/Maintnence" title="Maintnence" theme={theme}>Overview</HeaderLinks></li>
-                         <li><Df>m</Df><HeaderLinks href="#/Maintnence/Mulching" title="Mulching Service" theme={theme}>Mulching</HeaderLinks></li>
-                         <li><Df>m</Df><HeaderLinks href="#/Maintnence/Pruning" title="Pruning Service" theme={theme}>Pruning</HeaderLinks></li>
+                         <li><Df>m</Df><HeaderLinks href="/Maintnence" title="Maintnence" theme={theme}>Overview</HeaderLinks></li>
+                         <li><Df>m</Df><HeaderLinks href="/Maintnence/Mulching" title="Mulching Service" theme={theme}>Mulching</HeaderLinks></li>
+                         <li><Df>m</Df><HeaderLinks href="/Maintnence/Pruning" title="Pruning Service" theme={theme}>Pruning</HeaderLinks></li>
                     </HiddenList>
                </MaintnenceDiv>
-               <HeaderLinks href="#/Gallery" title="Gallery" theme={theme}>Gallery</HeaderLinks>
-               <HeaderLinks href="#/About" title="About" theme={theme}>About</HeaderLinks>
-               <HeaderLinks href="#/FAQ" title="FAQ" theme={theme}>FAQ</HeaderLinks>
-               <HeaderLinks href="#/ContactUs" title="Contact" theme={theme}>Contact</HeaderLinks>
+               <HeaderLinks href="/Gallery" title="Gallery" theme={theme}>Gallery</HeaderLinks>
+               <HeaderLinks href="/About" title="About" theme={theme}>About</HeaderLinks>
+               <HeaderLinks href="/FAQ" title="FAQ" theme={theme}>FAQ</HeaderLinks>
+               <HeaderLinks href="/ContactUs" title="Contact" theme={theme}>Contact</HeaderLinks>
           </DivId1>
      );
 

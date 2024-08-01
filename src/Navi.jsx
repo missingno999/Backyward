@@ -30,7 +30,7 @@ Text black: Default text color
 function Navi(){
      return(
           <>
-               <HashRouter>{/*<BrowserRouter>*/}
+               <BrowserRouter basename="/Backyward/">{/*<HashRouter>*/}
                     <Routes>
                          <Route path='/Home' element={<Home/>}/>
                          <Route path='/Design' element={<Designandinstall/>}/>
@@ -43,7 +43,7 @@ function Navi(){
                          <Route path='/ContactUs' element={<ContactUs/>}/>
                          <Route path='/' element={<Home/>}/>
                     </Routes>
-               </HashRouter>{/*</BrowserRouter>*/}
+               </BrowserRouter>{/*</HashRouter>*/}
                <Contact/>
           </>
      )
