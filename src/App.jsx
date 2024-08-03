@@ -178,7 +178,7 @@ WB2.defaultProps={
      open:true
 };
 
-function CollapsibleButtons({image,children,linked}){
+function CollapsibleButtons({image,children,linked,altText}){
      const [isOpen,setOpened]=useState(false);
      const [a,sa]=useState(false);
 
@@ -189,7 +189,7 @@ function CollapsibleButtons({image,children,linked}){
                          <img src={image} style={!isOpen ? {filter: "blur(1px)"}:{filter: "blur(0px)"}} onTouchStart={()=>(isOpen && sa(false))} onClick={()=>(setOpened(!isOpen))}></img>
                          <div>
                               {children}
-                              <a href={linked}> <PurpButt>Learn More{">>>"}</PurpButt></a>
+                              <a href={linked} alt={altText}> <PurpButt>Learn More{">>>"}</PurpButt></a>
                          </div>
                     </WB2>
                </span>
@@ -257,7 +257,6 @@ function Home() {
 
      return (
           <>
-          <link rel="preload" as="image" href={num26}/>
           <MainHeader homePageProp={1}/>
                <HomeBack b={num3}>
                {!mobile ?
@@ -300,7 +299,7 @@ function Home() {
                                    <SquareF2>
                                         <img src={num26}></img>
                                    </SquareF2>
-                                   <a href="/About"><PurpButt Title="Learn who we are">Learn More {">>>"}</PurpButt></a>
+                                   <a href="/About" alt="Link to our about page"><PurpButt Title="Learn who we are">Learn More {">>>"}</PurpButt></a>
                               </>
                          }
                     spacerShrinks={[5,5.7,5.2]}
@@ -311,7 +310,7 @@ function Home() {
                <WrappingDiv spacerShrinks={[5,5]} mainWidth="85%">
                {!reallyMobile ?
                     <>
-                         <a href='/Design'>
+                         <a href='/Design' alt="Link to design and installation">
                          <WB2 Title="Click to learn more">
                               <img src={num17}></img>
                               <div>
@@ -321,7 +320,7 @@ function Home() {
                               </div>
                          </WB2>
                          </a>
-                         <a href='/Maintnence'>
+                         <a href='/Maintnence' alt="Link to maintainence overview page">
                          <WB2 Title="Click to learn more">
                               <img src={num14}></img>
                               <div>
@@ -331,7 +330,7 @@ function Home() {
                               </div>
                          </WB2>
                          </a>
-                         <a href='/Maintnence/Mulching'>
+                         <a href='/Maintnence/Mulching' alt="Link to mulching">
                          <WB2 Title="Click to learn more">
                               <img src={num5}></img>
                               <div>
@@ -342,10 +341,10 @@ function Home() {
                          </WB2>
                          </a>
                          <a href='/Maintnence/Pruning'>
-                         <WB2 Title="Click to learn more">
+                         <WB2 Title="Click to learn more" alt="Link to pruning and trimming">
                               <img src={num16}></img>
                               <div>
-                                   <h4>Trimming</h4>
+                                   <h4>Pruning</h4>
                                    <p>We do it all!</p>
                                    <p>{">>>"}</p>
                               </div>
@@ -354,22 +353,22 @@ function Home() {
                     </>
                :
                     <>
-                         <CollapsibleButtons image={num17} linked={'/Design'}>
+                         <CollapsibleButtons image={num17} linked={'/Design'} altText="Link to design and installation">
                               <h4 >Design</h4>
                               <p>We do designs!</p>
                          </CollapsibleButtons>
 
-                         <CollapsibleButtons image={num14} linked={'/Maintnence'}>
+                         <CollapsibleButtons image={num14} linked={'/Maintnence'} altText="Link to maintainence overview page">
                               <h4>Maintnence</h4>
                               <p>We maintain!</p>
                          </CollapsibleButtons>
 
-                         <CollapsibleButtons image={num5} linked={'/Maintnence/Mulching'}>
+                         <CollapsibleButtons image={num5} linked={'/Maintnence/Mulching'} altText="Link to mulching">
                               <h4>Mulch</h4>
                               <p>We mulch!</p>
                          </CollapsibleButtons>
 
-                         <CollapsibleButtons image={num16} linked={'/Maintnence/Pruning'}>
+                         <CollapsibleButtons image={num16} linked={'/Maintnence/Pruning'} altText="Link to pruning and trimming">
                               <h4>Trimming</h4>
                               <p>We do it all!</p>
                          </CollapsibleButtons>

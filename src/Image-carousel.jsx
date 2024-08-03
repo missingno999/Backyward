@@ -61,8 +61,6 @@ const Button=styled.button`
      @media (max-width:501px){
           display:none;
      }
-
-
 `;
 
 const MainDiv=styled.div`
@@ -71,7 +69,6 @@ const MainDiv=styled.div`
      justify-content: center;
      margin-left:5px;
      margin-right:5px;
-
      height: ${(props)=>(props.Height)}px;
      div#imageAndSub{
           display: flex;
@@ -114,7 +111,7 @@ const MainDiv=styled.div`
 const TitleCounter=styled.div`
 
      font-family: Courgette-Regular;
-     padding:3px;
+     padding-bottom:3px;
      color: #783aad;
      width:100%;
      text-align: center;
@@ -136,46 +133,37 @@ const Exit=styled(SquareFrame)`
 const FullImg=styled.img`
      transform: scale(${(props)=>(`${props.zoom},${props.zoom}`)}) translate(${(props)=>(`${props.X}px,${props.Y}px`)});
 `;
-//IMPORTANT NOTE: Come back later and consider using vine sihlouette images to add a sort of border to the slide show. Otherwise, it looks really plain and kinda abrupt
 
 
-/*
-imageList=a list of images to cycle through
-subtitleList=a list of strings, each of which would be associated with one image.
-     Extras are ignored, and if their are more images than strings, only the first few images will recieve subtitles.
-     null strings '' mean the current pic doesn't have a subtitle
-controlType=if the carousel is automatic, user controlled, or both. 'auto', 'user', or 'both' are valid, all else are invalid.
-canFullScreen=boolean for enabling/disabling fullscreen. Secretly has a 3rd option (=2) that will cause the carousel to only be full screen
-tall=a string combining number and unit for what this component's renedered height should be
-title=a string that can appear at the top of the component
-itemIndex=the index of the picture to start the slide show on. Intended solely for fullscreen only, so no functionality on normal size
-//transitions: a tagged string that allows for defining how images transition during changes. Unimplemented.
-*/
 //Needs a height supplied by user
-function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullScreen='1', Title='', autoNextDuration=5000, Height='400', className, itemIndex=0, toFull=()=>(console.log('e')), isFull=false,cursOver="Click for full screen"}){
+function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullScreen='1', Title='', Height='400', className, itemIndex=0, toFull=()=>(console.log('e')), isFull=false,cursOver="Click for full screen"}){
      const [imageIndex, setImageIndex]=useState(itemIndex);//current image
      const [clickDrag,setDrag]=useState(false);
      const [limiter1,setL1]=useState(0);
      const [zoom,setZoom]=useState(1);
+     const [iewe,setiiii]=useState(-1);
      const [X1,setX1]=useState(0);
      const [Y1,setY1]=useState(0);
      const [moX,setMOX]=useState(0);
      const [moY,setMOY]=useState(0);
      const [transX,setX]=useState(0);
      const [transY,setY]=useState(0);
-
      const [swipeStart,setSwipe]=useState(0);
-     const [pinchZoom,setPinch]=useState({x1:0,y1:0});
-
 
      //Sets and resets the automatic increment timer
+     //set event listener that will wait for the x-box to be hit, then reactivate the timer. Don't bother removing it.
      useEffect(()=>{
           var timer=null;
           if(controlType!='user'){
-               timer=window.setTimeout(()=>{incrementIndex()},autoNextDuration);
+               if(iewe>-1){
+                    timer=window.setTimeout(()=>{incrementIndex()},5000);
+               }
+               if(iewe<-1){
+                    window.addEventListener('goEvent',()=>(setiiii(0)));
+               }
           }
-          return (()=>(timer!=null ? clearTimeout(timer) : timer=null));
-     },[imageIndex]);
+          return (()=>((timer!=null ? clearTimeout(timer) : timer=null)));
+     },[iewe]);
 
      useEffect(()=>{
           setImageIndex(itemIndex);
@@ -223,21 +211,6 @@ function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullSc
           }
      };
 
-     function zoomFunc2(e){
-          let a=zoom+((((pinchZoom.x1^2+pinchZoom.y1^2)^0.5)/(((e.touches[0].clientX-e.touches[1].clientX)^2+(e.touches[0].clientY-e.touches[1].clientY)^2)^0.5))/100-1);
-          if(a<0.01){
-               setZoom(0.01);
-          }
-          else{
-               if(a>3){
-                    setZoom(3);
-               }
-               else{
-                    setZoom(a);
-               }
-          }
-
-     };
 
      function normalFull(){
           setX(0);
@@ -269,9 +242,6 @@ function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullSc
                setX(e.touches[0].clientX-X1);
                setY(e.touches[0].clientY-Y1);
           }
-          /*if(e.touches.length>1){
-               zoomFunc2(e);
-          }*/
 
      }
 
@@ -319,7 +289,7 @@ function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullSc
 
      return(
           <>
-          <div style={{maxHeight: window.innerHeight,marginTop:10}} className={className} onTouchStart={(e)=>(setSwipe(e),(e.touches.length>=2 && setPinch({x1: e.touches[0].clientX-e.touches[1].clientX, y1: e.touches[0].clientY-e.touches[1].clientY})))}
+          <div style={{maxHeight: window.innerHeight,marginTop:(isFull ? 0:10)}} className={className} onTouchStart={(e)=>(setSwipe(e))}
           onTouchMove={(e)=>(onTouchyMoving(e))} onTouchEnd={(e)=>(setDrag(false),setMOX(-1*transX),setMOY(-1*transY),endFUnc(e))}
           onMouseUp={()=>(setDrag(false),setMOX(-1*transX),setMOY(-1*transY))} onMouseMove={(e)=>(clickDrag && (setX(e.clientX-X1),setY(e.clientY-Y1)))}>
 
@@ -329,7 +299,7 @@ function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullSc
                <MainDiv fullScreenable={canFullScreen} id="HHHH" Height={Height} tabindex="0" onKeyUp={(e)=>(onkeyup(e))}>
                     <Button controlType={controlType} onClick={()=>{decrementIndex()}}><b><i>{'<'}</i></b></Button>
                          <div id="imageAndSub" title={!isFull && cursOver}  onWheel={(isFull ? (e)=>(setL1((limiter1+1)%5), ( limiter1==0 && zoomFunc(e) )) : ()=>{})}>
-                              <Exit as="span" onClick={()=>{toFull({vis: false, in:0}),setZoom(1),normalFull()}}><img alt={"X out of fullscreen"} title={"Exit fullscreen"} src={Xout}></img></Exit>
+                              <Exit as="span" onClick={()=>{toFull({vis: false, in:0}),setZoom(1),normalFull(),window.dispatchEvent(new CustomEvent("goEvent"))}}><img alt={"X out of fullscreen"} title={"Exit fullscreen"} src={Xout}></img></Exit>
                               <div id="ima" >
                                    {isFull ?
                                         <>
@@ -338,7 +308,7 @@ function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullSc
                                         </>
                                         :
                                         <>
-                                        <img id="currentImage" src={imageList[imageIndex]} onClick={canFullScreen==1 ? (e)=>{toFull({vis: true, in: imageIndex}),e.target.blur()} : ()=>{}}></img>
+                                        <img id="currentImage" onLoad={()=>(iewe!=-2 && setiiii(!iewe))} src={imageList[imageIndex]} onClick={canFullScreen==1 ? (e)=>{toFull({vis: true, in: imageIndex}),e.target.blur(),setiiii(-2)} : ()=>{}}></img>
                                         </>
                                    }
                               </div>
@@ -354,7 +324,6 @@ function ImageCarousel({imageList, subtitleList=[], controlType="both",canFullSc
 
      );
 }
-
 
 
 function FullScreenCarousel({imageList, subtitleList, Title, itemIndex,isVisi,fromFull}){
@@ -377,6 +346,7 @@ function FullScreenCarousel({imageList, subtitleList, Title, itemIndex,isVisi,fr
           </>
      );
 }
+
 
 
 

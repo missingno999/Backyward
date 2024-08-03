@@ -13,6 +13,7 @@ import About from "./About.jsx";
 import FAQ from "./FAQ.jsx";
 import ContactUs from "./ContactUs.jsx";
 
+
 /* Color guided
 Text off-white: #f7f7f7
 Main green: #0f725e
@@ -25,12 +26,10 @@ Dark magenta: #ad3aa9
 Text black: Default text color
 */
 
-
-
 function Navi(){
      return(
           <>
-               <BrowserRouter basename="/Backyward/">{/*<HashRouter>*/}
+               <BrowserRouter basename="/Backyward">{/*<HashRouter>*/}
                     <Routes>
                          <Route path='/Home' element={<Home/>}/>
                          <Route path='/Design' element={<Designandinstall/>}/>

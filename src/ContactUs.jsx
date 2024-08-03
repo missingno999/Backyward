@@ -137,7 +137,7 @@ function FormItem(props){
      return(
           <>
                <Label style={{}} for={props.Type} hasIt={trans} >{props.children}</Label>
-               <input required={props.required} type={props.daType} id={props.Type} name={props.Type}
+               <input alt={"Text input for "+props.children} required={props.required} type={props.daType} id={props.Type} name={props.Type}
                onFocus={()=>(setTrans(true))} onBlur={()=>(document.getElementById(props.Type).value=="" && setTrans(false))}></input>
                <br></br>
           </>
@@ -198,10 +198,10 @@ function ContactUs(){
                                    </FormItem>
 
                                    <label for="message">Message:</label><br></br>
-                                   <textarea id="message" name="message" required rows={9} cols={45}></textarea>
+                                   <textarea alt="Text feild for your email to use" id="message" name="message" required rows={9} cols={45}></textarea>
                                    <br></br>
 
-                                   <span onClick={()=>(sendEmail())}> <PurpButt Title="Send Email">Send</PurpButt></span>
+                                   <span onClick={()=>(sendEmail())} alt="Button to send your email"> <PurpButt Title="Send Email">Send</PurpButt></span>
                               </DatePlease>
                               {nummm && <RGBlabel status={resStat}/>}
                          </>
